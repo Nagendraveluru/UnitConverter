@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-MW7anwJXTd0udhOuGxjLW7aIXt0fDYZ7LL4O4s/wKjYzZQsE4GrFyogvRKJrPQyvj2NfjXGZuv1mk8JN/6+VA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">UNIT CONVERTER</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mobile-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="converter-wrapper">
+        <!-- <h1>UNIT CONVERTER</h1> -->
+
+        <form name="property_form">
+            <span>
+                <select class="select-property" name="the_menu" size="1"
+                    onchange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)"></select>
+            </span>
+        </form>
+
+        <div class="converter-side-a">
+            <h3>From Unit</h3>
+            <form name="form_A" onsubmit="return false">
+                <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0"
+                    onkeyup="CalculateUnit(document.form_A, document.form_B)" />
+                <span>
+                    <select name="unit_menu" onchange="CalculateUnit(document.form_B, document.form_A)"></select>
+                </span>
+            </form>
+        </div>
+
+        <div class="converter-equals">
+            <p>=</p>
+        </div>
+
+        <div class="converter-side-b">
+            <h3>To Unit</h3>
+            <form name="form_B" onsubmit="return false">
+                <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0"
+                    onkeyup="CalculateUnit(document.form_B, document.form_A)" />
+                <span>
+                    <select name="unit_menu" onchange="CalculateUnit(document.form_A, document.form_B)"></select>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="project-info">
+        <h3>About the Unit Converter</h3>
+        <p>The Unit Converter is a tool that allows you to convert between different units of measurement. With this
+            tool, you can easily convert measurements of length, weight, volume, temperature, and more. The Unit
+            Converter supports a wide range of units, including both metric and imperial units.</p>
+        <p>The Unit Converter is easy to use. Simply select the type of measurement you want to convert, enter the value
+            you want to convert, and choose the units you want to convert from and to. The tool will automatically
+            calculate the conversion for you.</p>
+        <p>The Unit Converter is a great resource for anyone who needs to quickly convert measurements. Whether you're a
+            student, a professional, or just someone who needs to convert units on a regular basis, the Unit Converter
+            is a fast and easy solution.</p>
+    </div>
+
+    <section class="faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>How do I use the unit converter?</h3>
+                <p>To use the unit converter, simply select the type of measurement you want to convert from and to,
+                    enter the value in the input field, and click on the "Convert" button. The result will be displayed
+                    below the input field.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What types of measurements can I convert?</h3>
+                <p>You can convert various types of measurements such as length, mass, temperature, volume, and more.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I convert between different unit systems?</h3>
+                <p>Yes, you can convert between different unit systems such as metric, imperial, and US customary units.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Is the unit converter accurate?</h3>
+                <p>The unit converter is based on standard conversion factors and equations, and is designed to be as
+                    accurate as possible. However, we cannot guarantee its accuracy in all cases.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About the Unit Converter</h3>
+                <p>The Unit Converter is a tool that allows you to convert between different units of measurement.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><span><i class="fab fa-envelope"></i> Email:</span> contact@unitconverter.com</li>
+                    <li><span><i class="fa fa-phone"></i> Phone:</span> 8923456789</li>
+                    <li><span><i class="fa fa-map-marker"></i> Address:</span> 123 xyz,India</li>
+                </ul>
+            </div>
+            <!-- <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div> -->
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Unit Converter | Designed by Dnyaneshwari Walde
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="main.js"></script>
+
+</html>
